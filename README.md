@@ -22,4 +22,5 @@ pip install python-decouple
 ### Lancer le projet
 
 * Copier le .example.env en .env et ajouter ses informations personnelles
+* Les bots amazon sont capable d'acheter directement la PS5 mais la ligne de code est commenté par défaut (aller dans chaque fichier et décommentez la)
 * python bot_ps5_amazon.py (faire pareil pour tous les bots que vous souhaitez lancer)
