@@ -8,6 +8,8 @@ import time
 import winsound
 from decouple import config
 
+# TO IMPROVE, GET KICKED BECAUSE REFRESH BY FNAC AFTER SOME TIME
+
 driver = webdriver.Chrome('..\..\Downloads\chromedriver_win32\chromedriver')
 driver.get("https://www.fnac.com/Console-Sony-PS5-Edition-Digital/a14119961/w-4#omnsearchpos=2")
 time.sleep(30)
