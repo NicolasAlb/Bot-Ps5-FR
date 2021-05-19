@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-import winsound
 from decouple import config
 
 driver = webdriver.Chrome('..\..\Downloads\chromedriver_win32\chromedriver')
@@ -26,11 +25,8 @@ while True:
         driver.refresh()
     else:
         driver.find_element_by_id("add-to-cart-button").click()
-        btn = WebDriverWait(driver, 30
-            ).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[2]/div[4]/div[6]/div[1]/div[9]/div/div[1]/div/div/div[1]/div[3]/div[1]/div[2]/div[3]/span/span/input")))
-
+        btn = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.ID, "hlb-ptc-btn-native")))
         btn.click()
-        winsound.Beep(2500, 1000)
         # CAREFUL BY UNCOMMENTING this line it will buy the PS5 as soon as it's available
         # driver.find_element_by_xpath("/html/body/div[8]/div/div/div[2]/div/div[1]/div/div[1]/div[1]/div/span/span/input").click()
         break
